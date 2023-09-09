@@ -80,7 +80,7 @@
     z-index: 2;
     
    /* for firefox */
-    transform: rotateX(0deg)
+    transform: rotateX(0deg);
     display: inline-block;
     width: 100px;
     height: 100px;
@@ -88,7 +88,7 @@
 /* back, initially hidden pane */
 .back {
     /* again, for firefox... */
-    transform: rotateX(0deg)
+    transform: rotateX(0deg);
     display: inline-block;
     width: 100px;
     height: 100px;
