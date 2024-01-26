@@ -216,6 +216,9 @@ h3 {
    }
     .links{
         width: 300px;
+        -moz-box-shadow: 0 0 10px 10px #343434;
+        -webkit-box-shadow: 0 0 10px 10px #343434;
+        box-shadow: 0 0 10px 10px#343434;
    }
     h3 {
         font-size: 24px;
