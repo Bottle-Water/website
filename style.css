@@ -149,7 +149,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:  #4D4D4D;
+    border-radius: 30px;
     z-index: 2;
 }
 .links {
