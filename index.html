@@ -9,16 +9,23 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💾</text></svg>"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+
+
 		<title>Zachary Burkett</title>
 	</head>
 	<body>
 		<div class="shapes">
-			<div class="triangle"></div>
-			<div class="triangle2"></div>
-			<div class="square"></div>
-			<div class="square2"></div>
-			<div class="circle"></div>
-			<div class="circle2"></div>
+			<div class="shape triangle"></div>
+			<div class="shape triangle2"></div>
+			<div class="shape square"></div>
+			<div class="shape square2"></div>
+			<div class="shape circle"></div>
+			<div class="shape circle2"></div>
 		</div>
 
         <div class="intro">Hey! My name is...</div>
@@ -66,5 +73,41 @@
 				</div>
 			</div>
 		</div>
+
+		<!--JS-->
+		<script>
+			gsap.registerPlugin(ScrollTrigger);
+			var rotate = gsap
+			.timeline({
+				scrollTrigger: {
+				trigger: "html",
+				pin: false,
+				scrub: 1,
+				start: "top top",
+				end: "bottom bottom"
+				}
+
+			})
+
+			.set(".shapes", {visibility: "visible"})
+
+			.fromTo(".shape", 
+			{
+				autoAlpha:1, 
+				delay:1,
+				opacity: 1,
+			},
+			
+			{
+				autoAlpha: 0,
+				rotation: 360,
+				opacity: 0,
+				x:-100,
+				runBackwards: true,
+				duration: 5,
+				ease: "back.out"
+			});
+
+		</script>
 	</body>
 </html>
